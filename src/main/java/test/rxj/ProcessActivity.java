@@ -41,12 +41,13 @@ public abstract class ProcessActivity <T1, T2> implements Func1<T1, T2>, Observe
 		return process(t1);
 	}
 	
+	// similar to map function
 	protected abstract T2 process(T1 t1);
 	
-	// a better onCompleted
+	// specified ops for onCompleted, with additional object
 	protected abstract void onSuccess(T2 t2);
 	
-	// specified ops for onError
+	// specified ops for onError, with additional object
 	protected abstract void onFailed(T2 t2, Throwable e);
 	
 }
