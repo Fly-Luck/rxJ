@@ -2,7 +2,7 @@ package test.rxj;
 
 import java.util.Map;
 
-public class ContextAwareException extends Throwable {
+public class ContextAwareException extends RuntimeException {
 	
 	private static final long serialVersionUID = 1L;
 
