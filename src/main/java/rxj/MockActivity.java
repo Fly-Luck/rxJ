@@ -1,4 +1,4 @@
-package test.rxj;
+package rxj;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,17 +6,17 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 
 @Component
-public class JestActivity extends ProcessActivity<String, String>{
+public class MockActivity extends ProcessActivity<String, String>{
 	
-	public JestActivity() {
+	public MockActivity() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
 	protected String process(String t1) {
 		try {
-			System.out.println("Jesting with "+t1);
-			t1 += " Or I'll be damned";
+			System.out.println("Mocking with "+t1);
+			t1 += " and that's all you've got?";
 		} catch(Exception e) {
 			Map<String, Object> context = new HashMap<String, Object>();
 			context.put(String.class.getSimpleName(), t1);
@@ -27,11 +27,11 @@ public class JestActivity extends ProcessActivity<String, String>{
 	
 	@Override
 	protected void onSuccess(String t2) {
-		System.out.println("Success jested " + t2);
+		
 	}
 	
 	@Override
 	protected void onFailed(String t2, Throwable e) {
-		System.out.println("Failed to jest t2: " + e);
+		
 	}
 }

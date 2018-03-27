@@ -1,0 +1,7 @@
+pool:
+  coreSize: 1
+  maxSize: 10
+  keepAlive: 1200
+  queueSize: -1
+server:
+  port: 8080

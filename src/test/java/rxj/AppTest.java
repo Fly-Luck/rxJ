@@ -1,4 +1,4 @@
-package test.rxj;
+package rxj;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

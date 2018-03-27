@@ -1,8 +1,9 @@
-package test.rxj;
+package rxj;
 
 import java.util.concurrent.ExecutorService;
 
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import rx.Observable;
@@ -10,12 +11,14 @@ import rx.schedulers.Schedulers;
 
 @Component
 public class SomeProcess implements InitializingBean {
-	private JestActivity jestActivity;
 	
-	private MockActivity mockActivity;
+	private final JestActivity jestActivity;
 	
-	private ExecutorService executorService;
+	private final MockActivity mockActivity;
 	
+	private final ExecutorService executorService;
+	
+	@Autowired
 	public SomeProcess(ExecutorService executorService, JestActivity jestActivity, MockActivity mockActivity) {
 		this.jestActivity = jestActivity;
 		this.mockActivity = mockActivity;

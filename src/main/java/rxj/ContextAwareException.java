@@ -1,4 +1,4 @@
-package test.rxj;
+package rxj;
 
 import java.util.Map;
 
