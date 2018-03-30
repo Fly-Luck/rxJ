@@ -15,7 +15,7 @@ public class MockActivity extends ProcessActivity<String, String>{
 	@Override
 	protected String process(String t1) {
 		try {
-			System.out.println("Mocking with "+t1);
+			System.out.println("[Mocker]: Mocking with "+t1);
 			t1 += " and that's all you've got?";
 		} catch(Exception e) {
 			Map<String, Object> context = new HashMap<String, Object>();
@@ -27,11 +27,11 @@ public class MockActivity extends ProcessActivity<String, String>{
 	
 	@Override
 	protected void onSuccess(String t2) {
-		
+		System.out.println("[Mocker]: success: " + t2);
 	}
 	
 	@Override
 	protected void onFailed(String t2, Throwable e) {
-		
+		System.out.println("[Mocker]: failed, source:" + t2 + ", exception: " + e);
 	}
 }

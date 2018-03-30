@@ -15,5 +15,7 @@ public class MainController {
 	@RequestMapping(value = "/api/go/{word}", method = RequestMethod.GET)
 	public void go(@PathVariable("word") String word) {
 		someProcess.nowWeJest(word);
+		someProcess.nowWeJest(word);
+		someProcess.nowWeJest(word);
 	}
 }
