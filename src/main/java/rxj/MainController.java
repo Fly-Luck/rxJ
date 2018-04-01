@@ -12,10 +12,11 @@ public class MainController {
 	@Autowired
 	private SomeProcess someProcess;
 	
-	@RequestMapping(value = "/api/go/{word}", method = RequestMethod.GET)
-	public void go(@PathVariable("word") String word) {
-		someProcess.nowWeJest(word);
-		someProcess.nowWeJest(word);
-		someProcess.nowWeJest(word);
+	@RequestMapping(value = "/api/go/{name}", method = RequestMethod.GET)
+	public void go(@PathVariable("name") String name) {
+		someProcess.nowWeJest(name);		
+		System.out.println(name);
+		someProcess.nowWeJest(name);
+		someProcess.nowWeJest(name);
 	}
 }
